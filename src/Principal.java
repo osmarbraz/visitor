@@ -26,11 +26,12 @@ public class Principal {
     }
 
     /**
-     * O código cliente pode executar operações visitantes sobre
-     * quaisquer conjuntos de elementos sem saber suas classes
-     * concretas. A operação accept (aceitar) direciona a chamada
-     * para a operação apropriada no objeto visitante.
-     * @param shapes 
+     * O código cliente pode executar operações visitantes sobre quaisquer
+     * conjuntos de elementos sem saber suas classes concretas. A operação
+     * accept (aceitar) direciona a chamada para a operação apropriada no objeto
+     * visitante.
+     *
+     * @param shapes
      */
     private static void export(Shape... shapes) {
         XMLExportVisitor exportVisitor = new XMLExportVisitor();

@@ -7,16 +7,13 @@ import com.visitor.shapes.Rectangle;
 import com.visitor.shapes.Shape;
 
 /**
- * Visitantes concretos implementam várias versões do mesmo
- * algoritmo, que pode trabalhar com todas as classes elemento
- * concretas.
- * 
- * Você pode usufruir do maior benefício do padrão Visitor
- * quando estiver usando ele com uma estrutura de objeto
- * complexa, tal como uma árvore composite. Neste caso, pode ser
- * útil armazenar algum estado intermediário do algoritmo
- * enquanto executa os métodos visitantes sobre vários objetos
- * da estrutura.
+ * Visitantes concretos implementam várias versões do mesmo algoritmo, que pode
+ * trabalhar com todas as classes elemento concretas.
+ *
+ * Você pode usufruir do maior benefício do padrão Visitor quando estiver usando
+ * ele com uma estrutura de objeto complexa, tal como uma árvore composite.
+ * Neste caso, pode ser útil armazenar algum estado intermediário do algoritmo
+ * enquanto executa os métodos visitantes sobre vários objetos da estrutura.
  */
 public class XMLExportVisitor implements Visitor {
 
@@ -31,8 +28,9 @@ public class XMLExportVisitor implements Visitor {
 
     /**
      * Exporta a ID do dot (ponto) e suas coordenadas de centro.
+     *
      * @param d
-     * @return 
+     * @return
      */
     public String visitDot(Dot d) {
         return "<dot>" + "\n"
@@ -44,8 +42,9 @@ public class XMLExportVisitor implements Visitor {
 
     /**
      * Exporta a ID do circle (círculo), coordenadas do centro, e raio.
+     *
      * @param c
-     * @return 
+     * @return
      */
     public String visitCircle(Circle c) {
         return "<circle>" + "\n"
@@ -57,9 +56,11 @@ public class XMLExportVisitor implements Visitor {
     }
 
     /**
-     * Exporta a ID do retângulo, coordenadas do topo à esquerda, largura e altura.
+     * Exporta a ID do retângulo, coordenadas do topo à esquerda, largura e
+     * altura.
+     *
      * @param r
-     * @return 
+     * @return
      */
     public String visitRectangle(Rectangle r) {
         return "<rectangle>" + "\n"
@@ -73,8 +74,9 @@ public class XMLExportVisitor implements Visitor {
 
     /**
      * Exporta a ID da forma bem como a lista de ID dos seus filhos.
+     *
      * @param cg
-     * @return 
+     * @return
      */
     public String visitCompoundGraphic(CompoundShape cg) {
         return "<compound_graphic>" + "\n"

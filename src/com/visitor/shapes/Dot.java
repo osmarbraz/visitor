@@ -3,9 +3,9 @@ package com.visitor.shapes;
 import com.visitor.visitors.Visitor;
 
 /**
- * Cada classe concreta de elemento deve implementar o método
- * accept` de tal maneira que ele chama o método visitante que
- * corresponde com a classe do elemento. 
+ * Cada classe concreta de elemento deve implementar o método accept` de tal
+ * maneira que ele chama o método visitante que corresponde com a classe do
+ * elemento.
  */
 public class Dot implements Shape {
 
@@ -33,12 +33,12 @@ public class Dot implements Shape {
     }
 
     /**
-     * Observe que nós estamos chamando `visitDot`, que coincide
-     * com o nome da classe atual. Dessa forma nós permitimos
-     * que o visitante saiba a classe do elemento com o qual ele
-     * trabalha.
+     * Observe que nós estamos chamando `visitDot`, que coincide com o nome da
+     * classe atual. Dessa forma nós permitimos que o visitante saiba a classe
+     * do elemento com o qual ele trabalha.
+     *
      * @param visitor
-     * @return 
+     * @return
      */
     @Override
     public String accept(Visitor visitor) {
